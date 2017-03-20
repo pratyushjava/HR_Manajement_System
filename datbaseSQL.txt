@@ -7,7 +7,7 @@ create table employees(empid number(20),email varchar2(20),deptid number(20),Fna
 
 
 
-SQL> insert into employees values(101,'nani@gmail.com',10,'navaneeth','reddy','moddu',9441792844,'123');
+SQL> insert into employees values(101,'Pratyush@gmail.com',10,'pratyush','singh','ps',9441792844,'123');
 
 vacancy
 --------------------------
@@ -48,4 +48,4 @@ applydate date
 ,status varchar2(20));
 
 
- insert into applicant_vacancy values(83,71,'10/MAR/2010','NotRequired');
+ insert into applicant_vacancy values(83,71,'10/MAR/2015','NotRequired');
