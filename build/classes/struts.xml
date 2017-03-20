@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+ <!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.devMode" value="true" />
+	<package name="basic1" namespace="/basic1" extends="struts-default">
+		<!-- Business action mappings -->
+		<!-- rohitash arora vacancy -->
+		<action name="create2" class="action.CreateVacancyStruts2" >
+			<result name="success">/hr/SuccessVacancy.jsp</result>
+			<result name="error">/hr/createvacancy.jsp</result>
+		</action>
+		
+		<action name="ActionTag" class="action.ViewVacancyStruts" >
+			<result name="success">/hr/DisplayAllVacancies.jsp</result>
+			<result name="input">/hr/welcomehr.jsp</result>
+		</action>
+		
+		<action name="delete" class="action.DeleteAction" >
+			<result name="success">/hr/DisplayAllVacancies.jsp</result>
+			<result name="input">/hr/welcomehr.jsp</result>
+		</action>
+			
+		<action name="login" class="action.LoginStruts" >
+			<result name="success">/hr/welcomehr.jsp</result>
+			<result name="input">/interviewer/welcome.jsp</result>
+			<result name="error">/hr/Success.jsp</result>
+		</action>
+		
+		<action name="forgot" class="action.Forgot" >
+			<result name="success">/hr/passwordchanged.jsp</result>
+			<result name="error">/hr/Success.jsp</result>
+		</action>
+		
+		<action name="edit" class="action.GetVacancy" >
+			<result name="success">/hr/EditVacancy.jsp</result>
+			<result name="error">/hr/Success.jsp</result>
+		</action>
+		
+		<action name="edit1" class="action.EditVacancyAction" >
+			<result name="success">/hr/DisplayAllVacancies.jsp</result>
+			<result name="error">/hr/Success.jsp</result>
+		</action>
+		
+		<action name="searchvacancy" class="action.SearchVacancy" >
+			<result name="success">/hr/DisplayOneVacancy.jsp</result>
+			<result name="error">/hr/Success.jsp</result>
+		</action>
+		
+		<action name="searchapplicant" class="action.SearchApplicant" >
+			<result name="success">/hr/DisplayApplicant.jsp</result>
+			<result name="error">/hr/Success.jsp</result>
+		</action>
+		
+		
+		
+		<action name="createapplicant" class="action.CreateApplicant" >
+			<result name="success">/hr/Success.jsp</result>
+			<result name="error">/hr/Error.jsp</result>
+		</action>
+		
+		<action name="editapplicant" class="action.EditApplicant" >
+			<result name="success">/hr/EditApplicant1.jsp</result>
+			<result name="error">/hr/Error.jsp</result>
+		</action>
+		
+		<action name="editapplicant1" class="action.EditApplicant1" >
+			<result name="success">/hr/SuccessfullyUpdated.jsp</result>
+			<result name="error">/hr/Error.jsp</result>
+		</action>
+		
+		<action name="Logout" class="action.Logout" >
+			<result name="success">/index1.jsp</result>
+			<result name="error">/hr/Error.jsp</result>
+		</action>
+		
+		<action name="shortlist" class="action.ShortList" >
+			<result name="success">/hr/ShortList.jsp</result>
+			<result name="error">/hr/Error.jsp</result>
+		</action>
+		
+		<action name="viewshortlist" class="action.ViewShortListed" >
+			<result name="success">/hr/ViewShortListApplicant.jsp</result>
+			<result name="error">/hr/Error.jsp</result>
+		</action>
+		
+		<action name="shrtListSubmit" class="action.SubmitShortlistedApplicant" >
+			<result name="success">/hr/Temporary.jsp</result>
+			<result name="error">/hr/Error.jsp</result>
+		</action>
+		
+		
+		
+		<!-- arun chauhan schedule interview -->
+		
+		<action name="sint" class="action.ScheduleInterviewStruts" >
+			<result>/hr/ScheduleInterview.jsp</result>
+		    </action>
+		    
+		    <action name="sint1" class="action.ScheduleInterviewStruts1">
+			<result name="success">/hr/InterviewSuccess.jsp</result>
+			<result name="input">/hr/ScheduleInterview.jsp</result>
+		</action>
+		
+		<action name="vsint" class="action.ViewScheduleInterviewStruts" >
+			<result>/hr/ViewScheduleInterview.jsp</result>
+		    </action>
+		    
+		    <action name="editintsch" class="action.EditInterview" >
+			<result name="success">/hr/EditInterview.jsp</result>
+			<result name="error">/hr/Success.jsp</result>
+		</action>
+		
+		<action name="editintsch1" class="action.EditInterview1" >
+			<result name="success">/hr/ViewScheduleInterview.jsp</result>
+			<result name="error">/hr/Success.jsp</result>
+		</action>
+		
+		<action name="delintsch" class="action.DeleteInterview" >
+			<result name="success">/hr/ViewScheduleInterview.jsp</result>
+			<result name="input">/hr/welcomehr.jsp</result>
+		</action>
+		
+			<action name="handler" class="action.HandlerAction" >
+			<result name="success">/hr/b.jsp</result>
+		</action>
+		
+		
+		<action name="asint" class="action.AssignInterviewer" >
+			<result name="success">/hr/AssignInterviewer.jsp</result>
+		</action>
+		
+		<action name="asint1" class="action.AssignInterviewer1" >
+			<result name="success">/hr/AssignInterviewerSuccess.jsp</result>
+		</action>
+		
+		<action name="shortlistint" class="action.ShortilistInterviewSelectVid" >
+			<result name="success">/hr/ShortlistInterview.jsp</result>
+		</action>
+		
+		<action name="shortlistint1" class="action.ShortilistInterview" >
+			<result name="success">/hr/ShortlistInterviewSuccess.jsp</result>
+			
+		</action>
+		
+		<action name="saveshortlistint" class="action.SaveShortilistInterview" >
+			<result name="success">/hr/SaveShortilistInterview.jsp</result>
+			
+		</action>
+		
+		<action name="viewshortlistint" class="action.ViewShortilistInterview" >
+			<result name="success">/hr/ViewShortilistInterview.jsp</result>
+			
+		</action>
+		
+		
+		
+		</package>
+		
+		
+				<!-- punit jain written schedule -->
+		<package name="interview" namespace="/interview" extends="struts-default">
+		
+		<action name="wsch" class="action.WrittenScheduleStruts">
+			<result name="success">/interview/Success.jsp</result>
+			<result name="input">/interview/written.jsp</result>
+		</action>
+		
+		<action name="view" class="action.ViewScheduleStruts">
+			<result name="success">/interview/DisplayWrittenSchedule.jsp</result>
+			<result name="input">/</result>
+		</action>
+		
+		<action name="deletewschdl" class="action.DeleteScheduleStruts">
+			<result name="success">/interview/DisplayWrittenSchedule.jsp</result>
+			<result name="input">/</result>
+		</action>
+		
+		<action name="editwschdl" class="action.GetWrittenSchedule" >
+			<result name="success">/interview/EditWrittenSchedule.jsp</result>
+			<result name="input">/Success.jsp</result>
+		</action>
+		
+		<action name="updatewschdl" class="action.UpdateWrittenSchedule" >
+			<result name="success">/interview/DisplayWrittenSchedule.jsp</result>
+			<result name="input">/interview/Success.jsp</result>
+		</action>
+		
+		<action name="getallvaca" class="action.GetAllVacanciesForWritten" >
+			<result name="success">/interview/written.jsp</result>
+			<result name="input">/interview/Success.jsp</result>
+		</action>
+		
+		
+		
+	</package>
+	
+	<!-- om prakash rai applicant -->
+	<package name="applicant" namespace="/applicant" extends="struts-default">
+		<!-- Business action mappings -->
+		
+		<action name="createapplicant" class="actionapplicant.CreateApplicant" >
+			<result name="success">/applicant/Success.jsp</result>
+		</action>
+		
+		<action name="login" class="actionapplicant.LoginApplicant" >
+			<result name="success">/applicant/Welcome.jsp</result>
+			<result name="error">/applicant/Error.jsp</result>
+		</action>
+		
+		<action name="forgot" class="actionapplicant.ForgetPassword" >
+			<result name="success">/applicant/PasswordChanged.jsp</result>
+			<result name="error">/applicant/Error.jsp</result>
+		</action>
+		
+		<action name="viewcurrentvacancy" class="actionapplicant.ViewCurrentVacancy" >
+			<result name="success">/applicant/ViewCurrentVacancies.jsp</result>
+			<result name="error">/applicant/Error.jsp</result>
+		</action>
+		
+		<action name="apply" class="actionapplicant.ApplyVacancies" >
+			<result name="success">/applicant/Success.jsp</result>
+			<result name="input">/applicant/Alert.jsp</result>
+			<result name="error">/applicant/Error.jsp</result>
+		</action>
+		
+		<action name="edit" class="actionapplicant.EditProfile" >
+			<result name="success">/applicant/Success.jsp</result>
+			<result name="error">/applicant/Error.jsp</result>
+		</action>
+		
+		
+		<action name="getvacancy" class="actionapplicant.GetVacancy" >
+			<result name="success">/applicant/GetVacancy.jsp</result>
+ 			<result name="input">/applicant/NoTestSchedule.jsp</result> 
+ 			<result name="error">/applicant/Error.jsp</result> 
+		</action>
+		
+		<action name="viewvapplied" class="actionapplicant.ViewAppliedVacancy" >
+			<result name="success">/applicant/ViewAppliedVacancies.jsp</result>
+			<result name="error">/applicant/Error.jsp</result>
+		</action>
+		
+	</package>
+	
+	<package name="test" namespace="/test" extends="struts-default">
+		<!-- Business action mappings -->
+		
+		
+		<action name="testentry" class="actiontest.ReterieveVid" >
+			<result name="success">/test/TestEntry.jsp</result>
+		</action>
+		
+		
+		<action name="question" class="actiontest.TestEntry" >
+			<result name="success">/test/TestEntrySuccess.jsp</result>
+		</action>
+		
+		<action name="view_test" class="actiontest.ViewTestEntry" >
+			<result name="success">/test/ViewTestEntry.jsp</result>
+		</action>
+		
+		<action name="editques" class="actiontest.EditQuestionStruts" >
+			<result name="success">/test/EditQuestion.jsp</result>
+		</action>
+		
+		<action name="updateques" class="actiontest.UpdateQuestionStruts" >
+			<result name="success">/test/ViewTestEntry.jsp</result>
+		</action>
+		
+		<action name="deleteques" class="actiontest.DeleteQuestionStruts" >
+			<result name="success">/test/ViewTestEntry.jsp</result>
+		</action>	
+		
+		<action name="test" class="actiontest.TestAction">
+			<result name="success">/test/StartTest.jsp</result>
+		</action>
+		
+		<action name="showques" class="actiontest.RightFrameTest">
+			<result name="success">/test/RightFrameQuestion.jsp</result>
+		</action>
+		
+		<action name="ok" class="actiontest.Ok">
+			<result name="success">/test/RightFrameQuestion.jsp</result>
+		</action>
+		
+		<action name="result" class="actiontest.ResultGen">
+			<result name="success">/test/StartTest.jsp</result>
+		</action>
+	
+		<action name="vacancy" class="actiontest.ForwardVacancy">
+			<result>/test/Instructions.jsp</result>
+		</action>
+		
+		
+	</package>
+	
+	
+	<package name="interviewer" namespace="/interviewer" extends="struts-default">
+	
+	<action name="view" class="actioninterviewer.DisplayAllSchedules" >
+			<result name="success">/interviewer/DiasplayAllInterviewerSchedules.jsp</result>
+		</action>
+	
+	<action name="edittime" class="actioninterviewer.EditInterviewerTime" >
+			<result name="success">/interviewer/EditInterviewerTime.jsp</result>
+		</action>
+	
+	<action name="update1" class="actioninterviewer.UpdateInterviewerTime" >
+			<result name="success">/interviewer/DiasplayAllInterviewerSchedules.jsp</result>
+			<result name="error">/interviewer/Error.jsp</result>
+		</action>
+	
+	<action name="interviewresult" class="actioninterviewer.InterviewResultPre" >
+			<result name="success">/interviewer/InterviewResultPre.jsp</result>
+		</action>
+		
+		<action name="interviewresult1" class="actioninterviewer.InterviewResultPre1" >
+			<result name="success">/interviewer/InterviewResultPre1.jsp</result>
+		</action>
+		
+		<action name="finalresult" class="actioninterviewer.FinalInterviewResult" >
+			<result name="success">/interviewer/FinalInterviewResult.jsp</result>
+		</action>		
+		
+	
+	</package>
+	
+</struts>
