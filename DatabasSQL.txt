@@ -1,0 +1,51 @@
+
+employees
+---------------
+
+
+create table employees(empid number(20),email varchar2(20),deptid number(20),Fname varchar2(20),mname varchar2(20),lname varchar2(20),emob number(15),epass varchar2(20));
+
+
+
+SQL> insert into employees values(101,'pratyush@gmail.com',10,'pratyush','singh','psss',9441792844,'123');
+
+vacancy
+--------------------------
+
+create table vacancy(vid number(20),openingdate date,ownedby varchar2(20),status varchar2(10),title varchar2(20),description varchar2(100),jobopenings number(10), deptid number(20),closingdate date, empid number(10));
+
+insert into vacancy values(71,'10-10-2010','asd','close','java','dafssf',5,10,'12-12-2010',101);
+
+department
+--------------
+create table departments(deptid number,deptname varchar2(20));
+
+
+applicants
+--------------------
+create table applicants(appid number(20),doc date,status varchar2(20));
+
+
+login
+--------------------------------------------
+create table login(
+empid number(10) primary key,
+password varchar2(15),
+status varchar2(10));
+
+
+insert into login values(101,'123','hr');
+insert into login values(201,'223','iw');
+
+
+
+applicant_vacancy
+---------------------------------------------------------
+create table applicant_vacancy(
+appid number(10),
+vid number(10),
+applydate date
+,status varchar2(20));
+
+
+ insert into applicant_vacancy values(83,71,'10/MAR/2010','NotRequired');
